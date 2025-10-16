@@ -2,6 +2,7 @@ FROM maven:3-eclipse-temurin-21 as builder
 
 COPY pom.xml pom.xml
 COPY src src
+ENV MAVEN_ARGS=-ntp
 
 RUN mvn clean install
 

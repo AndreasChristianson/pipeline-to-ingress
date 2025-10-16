@@ -30,6 +30,7 @@ jobs:
           mvn clean verify
 
   build:
+    needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: read
