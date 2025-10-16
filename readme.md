@@ -61,3 +61,10 @@ kubectl get -n cijug pods
 kubectl port-forward -n cijug deployments/cijug 8080
 ```
 
+## part 7: Expose the service
+
+The deployment is visible at http://cijug.dev.pessimistic-it.com
+
+```shell
+open http://cijug.dev.pessimistic-it.com
+```
