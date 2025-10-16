@@ -13,5 +13,4 @@ COPY --from=builder /target/*.jar main.jar
 
 EXPOSE 8080
 
-# Define the command to run your React app
 CMD ["java", "-jar", "main.jar"]
