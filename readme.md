@@ -24,4 +24,8 @@ The app builds and runs tests on github actions.
 
 https://github.com/AndreasChristianson/pipeline-to-ingress/actions/workflows/deploy.yaml
 
+## part 4: container repository
 
+The app image builds and is pushed to a repository.
+
+https://github.com/AndreasChristianson/pipeline-to-ingress/actions/workflows/deploy.yaml
