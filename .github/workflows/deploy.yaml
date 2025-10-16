@@ -8,6 +8,9 @@ on:
 concurrency:
   group: ${{ github.workflow }}
 
+env:
+  MAVEN_ARGS: -ntp
+
 jobs:
   test:
     runs-on: ubuntu-latest
