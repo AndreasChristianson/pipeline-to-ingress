@@ -80,10 +80,15 @@ jobs:
       - name: confirm kubectl config
         run: |
           kubectl version
+      - name: lower case repo name
+        run: |
+          echo "repo_lc=${repo,,}" >>${GITHUB_ENV}
+        env:
+          repo: '${{ github.repository }}'
       - name: apply resources folder
         working-directory: "k8s-resources"
         run: |
-          kustomize edit set image app-image=ghcr.io/${{ github.repository }}:sha-${{ github.sha }}
+          kustomize edit set image app-image=ghcr.io/${repo_lc}:sha-${{ github.sha }}
           kubectl kustomize | kubectl apply -f -
       - name: await deployment rollout
         working-directory: "k8s-resources"
