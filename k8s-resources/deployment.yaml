@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cijug
+  namespace: cijug
+spec:
+  selector:
+    matchLabels:
+      app: cijug
+  template:
+    metadata:
+      labels:
+        app: cijug
+    spec:
+#      imagePullSecrets:
+#        - name: dockerconfigjson-github-com
+      containers:
+        - image: app-image # see kustomization
+          name: cijug
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: /
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /

@@ -36,6 +36,10 @@ The app image builds and is pushed to a repository.
 
 https://github.com/AndreasChristianson/pipeline-to-ingress/pkgs/container/pipeline-to-ingress
 
+```shell
+docker run --rm -p 8080:8080 ghcr.io/andreaschristianson/pipeline-to-ingress:latest
+```
+
 ## part 5: k8s access
 
 We can access the kubernetes cluster from github actions.
@@ -47,3 +51,8 @@ kubectl apply -f service-account.yaml
 ```
 
 Place generated kube config in a repo secret named KUBE_CONFIG.
+
+## part 6: Deploy to k8s
+
+The deployment is rolled out to k8s.
+
