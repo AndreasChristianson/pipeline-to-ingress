@@ -13,3 +13,8 @@ mvn clean spring-boot:run
 ```shell
 docker build -t cijug . && docker run -p 8080:8080 --rm cijug
 ```
+
+## part 3: automation
+
+
+
