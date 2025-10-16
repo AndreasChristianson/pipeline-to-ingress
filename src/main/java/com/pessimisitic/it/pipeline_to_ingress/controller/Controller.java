@@ -16,7 +16,7 @@ public class Controller {
             @RequestHeader("Host") String hostHeader
     ) throws UnknownHostException {
         model.addAttribute("now", Instant.now().toString());
-        model.addAttribute("hostName", InetAddress.getLocalHost().getHostName());
+        model.addAttribute("hostName", InetAddress.getLocalHost().getCanonicalHostName());
         model.addAttribute("hostHeader", hostHeader);
 
         return "index.html";

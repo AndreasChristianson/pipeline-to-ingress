@@ -56,3 +56,8 @@ Place generated kube config in a repo secret named KUBE_CONFIG.
 
 The deployment is rolled out to k8s.
 
+```shell
+kubectl get -n cijug pods
+kubectl port-forward -n cijug pods/cijug-* 8080
+```
+
