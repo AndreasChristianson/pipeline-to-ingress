@@ -1,4 +1,4 @@
-FROM maven:3-eclipse-temurin-21 as builder
+FROM maven:3-eclipse-temurin-21 AS builder
 
 COPY pom.xml pom.xml
 COPY src src
