@@ -3,6 +3,8 @@ kind: Kustomization
 namespace: cijug
 resources:
   - deployment.yaml
+  - ingress.yaml
+  - service.yaml
 images:
   - name: "app-image"
     newName: "ghcr.io/andreaschristianson/pipeline-to-ingress:latest"
