@@ -34,4 +34,6 @@ https://github.com/AndreasChristianson/pipeline-to-ingress/actions/workflows/dep
 
 The app image builds and is pushed to a repository.
 
-https://github.com/AndreasChristianson/
+https://github.com/AndreasChristianson/pipeline-to-ingress/pkgs/container/pipeline-to-ingress
+
+
