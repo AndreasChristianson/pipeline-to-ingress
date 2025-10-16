@@ -4,11 +4,15 @@ This repo demonstrates containerizing, building, deploying and exposing an examp
 
 ## part 1: just an app
 
+The app runs locally, in your shell or IDE
+
 ```shell
 mvn clean spring-boot:run
 ```
 
 ## part 2: containerization
+
+The app runs in local docker.
 
 ```shell
 docker build -t cijug . && docker run -p 8080:8080 --rm cijug
@@ -16,5 +20,8 @@ docker build -t cijug . && docker run -p 8080:8080 --rm cijug
 
 ## part 3: automation
 
+The app builds and runs tests on github actions.
+
+https://github.com/AndreasChristianson/pipeline-to-ingress/actions/workflows/deploy.yaml
 
 
