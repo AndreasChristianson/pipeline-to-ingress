@@ -36,12 +36,14 @@ The app image builds and is pushed to a repository.
 
 https://github.com/AndreasChristianson/pipeline-to-ingress/pkgs/container/pipeline-to-ingress
 
-## part 4: k8s access
+## part 5: k8s access
 
-We can access the kubernetes cluster from github actions
+We can access the kubernetes cluster from github actions.
 
 ```shell
 kubectl apply -f namespace.yaml                                                                                                                                                                                                 ⏎ ✹ ✭
 kubectl apply -f service-account.yaml
 ./create-kube-config.sh glowbox.pessimistic-it.com
 ```
+
+Place generated kube config in a repo secret named KUBE_CONFIG.
