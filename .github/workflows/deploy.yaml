@@ -61,3 +61,22 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  Deploy-k8s:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - uses: azure/setup-kubectl@v4
+        with:
+          version: 'v1.28.12'
+        name: install kubectl
+      - name: setup kubectl config
+        run: |
+          mkdir ${HOME}/.kube
+          echo "${{secrets.KUBE_CONFIG}}" >> ${HOME}/.kube/config
+        shell: bash
+      - name: confirm kubectl config
+        run: |
+          kubectl version
