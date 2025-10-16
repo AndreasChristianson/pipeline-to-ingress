@@ -2,6 +2,12 @@
 
 This repo demonstrates containerizing, building, deploying and exposing an example app.
 
+The journey:
+
+```shell
+git log --all --decorate --oneline --graph
+```
+
 ## part 1: just an app
 
 The app runs locally, in your shell or IDE
@@ -28,4 +34,4 @@ https://github.com/AndreasChristianson/pipeline-to-ingress/actions/workflows/dep
 
 The app image builds and is pushed to a repository.
 
-https://github.com/AndreasChristianson/pipeline-to-ingress/actions/workflows/deploy.yaml
+https://github.com/AndreasChristianson/
