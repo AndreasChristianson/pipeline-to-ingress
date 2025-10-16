@@ -58,6 +58,6 @@ The deployment is rolled out to k8s.
 
 ```shell
 kubectl get -n cijug pods
-kubectl port-forward -n cijug pods/cijug-* 8080
+kubectl port-forward -n cijug deployments/cijug 8080
 ```
 
